@@ -1,0 +1,385 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark grey text */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #00573D; /* Slightly darker emerald for headings */
+}
+
+a {
+    color: #006A4E; /* Dark Emerald for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #006A4E; /* Dark Emerald */
+    color: #ffffff;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #E0E0E0; /* Lighter white for hover */
+    text-decoration: none;
+}
+
+#sidebar-toggle {
+    background: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: none; /* Hidden by default, shown on smaller screens */
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -280px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #00573D; /* Slightly darker emerald */
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+#sidebar.open {
+    right: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+#sidebar ul li a {
+    color: #ffffff;
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+#sidebar ul li a:hover {
+    color: #E0E0E0;
+}
+
+#sidebar-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.cta-button-sidebar {
+    background-color: #ffffff;
+    color: #006A4E !important; /* Important to override general link color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.cta-button-sidebar:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+#hero {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #006A4E;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+.cta-button {
+    background-color: #006A4E; /* Dark Emerald */
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #00573D; /* Slightly darker emerald */
+    text-decoration: none;
+}
+
+/* Benefits Section */
+#benefits {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#benefits h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background-color: #f9f9f9; /* Very light grey */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.benefit-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* How It Works Section */
+#how-it-works {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#how-it-works h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    width: 22%;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.step-number {
+    background-color: #006A4E;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+/* Pricing Section */
+#pricing {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#pricing h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.pricing-box {
+    background-color: #006A4E; /* Dark Emerald */
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pricing-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.price {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 0.5em;
+    font-weight: normal;
+}
+
+.pricing-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-box ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.pricing-box ul li::before {
+    content: '✔'; /* Checkmark */
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.pricing-box .cta-button {
+    background-color: #ffffff;
+    color: #006A4E;
+}
+.pricing-box .cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+.note {
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Dark Grey */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links */
+    }
+    #sidebar-toggle {
+        display: block; /* Show hamburger menu */
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Stack benefits on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .step {
+        width: 90%;
+    }
+}
